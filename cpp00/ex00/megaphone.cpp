@@ -14,15 +14,13 @@
 
 int	main(int ac, char **av)
 {
-	int	i;
-	int	j;
+	int	i, j = 0;
 
 	if (ac < 2)
 	{
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 		return (0);
 	}
-	i = 0;
 	while (++i < ac)
 	{
 		j = -1;
