@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 14:10:06 by juhanse           #+#    #+#             */
-/*   Updated: 2025/03/04 14:33:59 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/05/13 17:11:49 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 int	main(int ac, char **av)
 {
-	int	i, j = 0;
+	int	i = 0;
+	int	j = 0;
 
 	if (ac < 2)
 	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return (0);
 	}
 	while (++i < ac)
