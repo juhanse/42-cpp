@@ -6,13 +6,13 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/04 13:56:34 by juhanse           #+#    #+#              #
-#    Updated: 2025/03/04 14:17:32 by juhanse          ###   ########.fr        #
+#    Updated: 2025/05/13 17:02:25 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
-CC = g++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 COLOUR_GREEN=\033[0;32m
 COLOUR_RED=\033[0;31m
