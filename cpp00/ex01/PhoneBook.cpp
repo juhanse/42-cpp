@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:50:08 by juhanse           #+#    #+#             */
-/*   Updated: 2025/05/14 17:05:45 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/05/14 17:12:26 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	PhoneBook::add(void) {
 	do {
 		std::cout << "Firstname: ";
 		std::getline(std::cin, first);
+		if (std::cin.eof())
+			return ;
 		if (first.empty())
 			std::cout << "Firstname cannot be empty" << std::endl;
 	} while (first.empty());
@@ -27,6 +29,8 @@ void	PhoneBook::add(void) {
 	do {
 		std::cout << "Lastname: ";
 		std::getline(std::cin, last);
+		if (std::cin.eof())
+			return ;
 		if (last.empty())
 			std::cout << "Lastname cannot be empty" << std::endl;
 	} while (last.empty());
@@ -34,6 +38,8 @@ void	PhoneBook::add(void) {
 	do {
 		std::cout << "Nickname: ";
 		std::getline(std::cin, nick);
+		if (std::cin.eof())
+			return ;
 		if (nick.empty())
 			std::cout << "Nickname cannot be empty" << std::endl;
 	} while (nick.empty());
@@ -41,6 +47,8 @@ void	PhoneBook::add(void) {
 	do {
 		std::cout << "Phone number: ";
 		std::getline(std::cin, number);
+		if (std::cin.eof())
+			return ;
 		if (number.empty())
 			std::cout << "Phone number cannot be empty" << std::endl;
 	} while (number.empty());
@@ -48,6 +56,8 @@ void	PhoneBook::add(void) {
 	do {
 		std::cout << "Darkest secret: ";
 		std::getline(std::cin, dark);
+		if (std::cin.eof())
+			return ;
 		if (dark.empty())
 			std::cout << "Darkest secret be empty" << std::endl;
 	} while (dark.empty());
@@ -66,9 +76,7 @@ void	PhoneBook::search(void) const {
 		std::cout << std::setw(10) << "Index" << "|"
 		<< std::setw(10) << "Firstname" << "|"
 		<< std::setw(10) << "Lastname" << "|"
-		<< std::setw(10) << "Nickname" << "|"
-		<< std::setw(10) << "Darkest" << "|"
-		<< std::setw(10) << "Number" << std::endl;
+		<< std::setw(10) << "Nickname" << std::endl;
 
 		for (int i = 0; i < size; i++) {
 			contacts[i].display(i);

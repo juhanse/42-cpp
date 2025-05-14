@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 10:58:43 by juhanse           #+#    #+#             */
-/*   Updated: 2025/05/14 17:05:28 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/05/14 17:12:32 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ void	Contact::display(int index) const {
 	std::cout << std::setw(10) << index << "|" 
 	<< std::setw(10) << truncate(firstname) << "|"
 	<< std::setw(10) << truncate(lastname) << "|"
-	<< std::setw(10) << truncate(nickname) << "|"
-	<< std::setw(10) << truncate(darkest) << "|"
-	<< std::setw(10) << truncate(number) << std::endl;
+	<< std::setw(10) << truncate(nickname) << std::endl;
 }
 
 void	Contact::displayContact(Contact contact) const {
