@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 21:07:52 by juhanse           #+#    #+#             */
-/*   Updated: 2025/05/14 12:08:17 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/05/14 14:27:44 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,13 @@ class PhoneBook
 {
 	public :
 		Contact	contacts[8];
-		bool	isFull;
-		int		nb_contacts;
+		int		size;
+		int		oldestIndex;
 	public :
+		PhoneBook();
+
 		void	add(void);
-		void	search(void);
+		void	search(void) const;
 };
 
 #endif
