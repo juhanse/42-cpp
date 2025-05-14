@@ -6,7 +6,7 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/04 13:56:34 by juhanse           #+#    #+#              #
-#    Updated: 2025/05/14 11:28:38 by juhanse          ###   ########.fr        #
+#    Updated: 2025/05/14 17:02:47 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,16 +19,16 @@ COLOUR_RED=\033[0;31m
 COLOUR_BLUE=\033[0;34m
 COLOUR_END=\033[0m
 
-SRC = main.cpp contact.cpp phonebook.cpp
+SRC = main.cpp Contact.cpp PhoneBook.cpp
 SRC_OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(SRC_OBJS)
-	$(CC) $(SRC_OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(SRC_OBJS) -o $(NAME)
 	@echo "$(COLOUR_GREEN)Compiled ✅$(COLOUR_END)"
 
-%.o: %.c
+.cpp.o:
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
