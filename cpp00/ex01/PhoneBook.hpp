@@ -21,12 +21,12 @@
 
 class PhoneBook
 {
-	private :
+	private:
 		Contact	contacts[8];
 		int		size;
 		int		oldestIndex;
 	
-	public :
+	public:
 		PhoneBook();
 
 		void	add(void);

@@ -25,7 +25,7 @@ void	Contact::setContact(const std::string& firstname, const std::string& lastna
 std::string Contact::truncate(const std::string& str) {
 	if (str.length() > 10)
 		return str.substr(0, 9) + ".";
-	return str;
+	return (str);
 }
 
 void	Contact::display(int index) const {
