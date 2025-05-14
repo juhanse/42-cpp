@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 10:56:59 by juhanse           #+#    #+#             */
-/*   Updated: 2025/05/14 11:26:09 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/05/14 11:59:46 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,11 @@ class Contact
 		std::string	nickname;
 		std::string	darkest;
 		std::string	number;
-
-		static std::string truncate(const std::string& str);
 	
 	public:
-		Contact();
-	
-		void setContact(const std::string firstname, const std::string lastname, const std::string nickname, const std::string darkest, const std::string number);
-		void display(int index) const;
+		Contact(const std::string firstname, const std::string lastname, const std::string nickname, const std::string darkest, const std::string number);
+
+		void display(Contact contact) const;
 		void displayAll() const;
 };
 

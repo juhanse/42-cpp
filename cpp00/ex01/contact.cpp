@@ -6,15 +6,13 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 10:58:43 by juhanse           #+#    #+#             */
-/*   Updated: 2025/05/14 11:28:55 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/05/14 12:10:42 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "contact.hpp"
 
-Contact::Contact() {}
-
-void	Contact::setContact(std::string firstname, std::string lastname, std::string nickname, std::string darkest, std::string number) {
+void	Contact(std::string firstname, std::string lastname, std::string nickname, std::string darkest, std::string number) {
 	firstname = firstname;
 	lastname = lastname;
 	nickname = nickname;
@@ -22,6 +20,14 @@ void	Contact::setContact(std::string firstname, std::string lastname, std::strin
 	number = number;
 }
 
-void	Contact::display(int index) const {
-	
+void	Contact::display(Contact contact) const {
+	std::cout << "Firstname: " << contact.firstname << std::endl;
+	std::cout << "Lastname: " << contact.lastname << std::endl;
+	std::cout << "Nickname: " << contact.nickname << std::endl;
+	std::cout << "Phone Number: " << contact.number << std::endl;
+	std::cout << "Darkest Secret: " << contact.darkest << std::endl;
+}
+
+void	Contact::displayAll() const {
+	std::cout << "DISPLAY ALL\n";
 }
