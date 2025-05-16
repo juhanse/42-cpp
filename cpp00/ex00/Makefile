@@ -19,7 +19,7 @@ COLOUR_RED=\033[0;31m
 COLOUR_BLUE=\033[0;34m
 COLOUR_END=\033[0m
 
-SRC = Megaphone.cpp
+SRC = megaphone.cpp
 SRC_OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
