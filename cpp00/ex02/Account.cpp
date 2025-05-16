@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 14:35:54 by juhanse           #+#    #+#             */
-/*   Updated: 2025/05/14 17:06:10 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/05/16 15:40:16 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ bool Account::makeWithdrawal(int withdrawal) {
 	std::cout << "index:" << _accountIndex << ";p_amount:" << _amount << ";withdrawal:";
 	if (withdrawal < 1 || withdrawal > _amount)
 	{
-		std::cout << "refused";
+		std::cout << "refused" << std::endl;
 		return (false);
 	}
 	_totalAmount -= withdrawal;
