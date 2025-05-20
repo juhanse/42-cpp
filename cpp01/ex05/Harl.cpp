@@ -1,0 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/20 16:49:23 by juhanse           #+#    #+#             */
+/*   Updated: 2025/05/20 16:52:46 by juhanse          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Harl.hpp"
+
+Harl::Harl() {
+	std::cout << "Harl is created" << std::endl;
+}
+
+Harl::~Harl() {
+	std::cout << "Harl is destroyed" << std::endl;
+}
+
+void	complain(std::string level) {
+	
+}
