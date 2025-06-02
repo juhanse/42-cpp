@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:01:24 by juhanse           #+#    #+#             */
-/*   Updated: 2025/05/20 15:48:21 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/06/02 14:56:55 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 
 class HumanB {
 	private:
-		std::string	_name;
-		Weapon*		_weapon;
+		const std::string	_name;
+		Weapon*	_weapon;
 
 	public:
 		HumanB(const std::string& name);
