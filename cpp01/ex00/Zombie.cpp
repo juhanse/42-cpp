@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 15:25:14 by juhanse           #+#    #+#             */
-/*   Updated: 2025/05/20 13:34:21 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/06/02 14:36:53 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,9 @@ Zombie::~Zombie() {
 
 void Zombie::announce() const {
 	std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void randomChump(std::string name) {
+	Zombie zombie(name);
+	zombie.announce();
 }
