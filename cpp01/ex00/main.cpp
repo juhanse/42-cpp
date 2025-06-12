@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 15:25:16 by juhanse           #+#    #+#             */
-/*   Updated: 2025/05/20 13:30:39 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/06/12 13:50:21 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int main() {
 	Zombie *zombie;
 
-	zombie = newZombie("zombie");
+	zombie = newZombie("Heap zombie");
 	zombie->announce();
-	randomChump("StackZombie");
+	randomChump("Stack zombie");
 	delete zombie;
 	return (0);
 }
