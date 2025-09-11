@@ -6,7 +6,7 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/16 15:23:44 by juhanse           #+#    #+#              #
-#    Updated: 2025/06/02 14:37:10 by juhanse          ###   ########.fr        #
+#    Updated: 2025/09/11 18:29:23 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ COLOUR_RED=\033[0;31m
 COLOUR_BLUE=\033[0;34m
 COLOUR_END=\033[0m
 
-SRC = main.cpp Zombie.cpp newZombie.cpp
+SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 SRC_OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
