@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 16:49:18 by juhanse           #+#    #+#             */
-/*   Updated: 2025/06/02 14:51:21 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/11 19:11:30 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@
 # include <string>
 
 class Harl {
-	public:
-		Harl();
-		~Harl();
-		void	complain(std::string level);
-
 	private:
 		void	debug(void) {
 			std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!" << std::endl;
@@ -38,6 +33,12 @@ class Harl {
 		void	error(void) {
 			std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 		}
+
+	public:
+		Harl();
+		~Harl();
+
+		void	complain(const std::string& level);
 };
 
 #endif
