@@ -6,11 +6,11 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/16 15:23:44 by juhanse           #+#    #+#              #
-#    Updated: 2025/05/20 13:55:40 by juhanse          ###   ########.fr        #
+#    Updated: 2025/09/11 18:30:33 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = horde
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
