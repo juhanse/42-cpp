@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:01:24 by juhanse           #+#    #+#             */
-/*   Updated: 2025/06/02 14:56:55 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/11 18:44:02 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class HumanB {
 		~HumanB();
 
 		void	setWeapon(Weapon& weapon);
-		void	attack() const;
+		void	attack(void) const;
 };
 
 #endif
