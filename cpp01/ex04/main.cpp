@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 13:47:06 by juhanse           #+#    #+#             */
-/*   Updated: 2025/06/12 12:01:05 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/11 18:47:52 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@
 
 int main(int ac, char **av)
 {
-	if (ac != 4)
-	{
+	if (ac != 4) {
 		std::cout << "Bad arguments" << std::endl;
 		return (1); 
 	}
