@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/07/07 13:58:14 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/13 15:06:01 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ class Fixed {
 
 	public:
 		Fixed();
-		Fixed(Fixed& copy);
+		Fixed(const Fixed& copy);
 		Fixed& operator=(const Fixed& other);
 		~Fixed();
 		int getRawBits(void) const;
-		void setRawBits(int const raw);
+		void setRawBits(const int raw);
 };
 
 #endif
