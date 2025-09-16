@@ -6,10 +6,15 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:29 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/14 21:30:16 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/16 11:37:50 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-int	main(void) {}
+int	main(void) {
+	ClapTrap one;
+	ClapTrap two("Two");
+
+	return (0);
+}
