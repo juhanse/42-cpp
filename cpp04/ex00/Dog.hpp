@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/07 11:28:29 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/16 13:44:34 by juhanse          ###   ########.fr       */
+/*   Created: 2025/09/16 11:51:04 by juhanse           #+#    #+#             */
+/*   Updated: 2025/09/16 13:42:24 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-int	main(void) {
-	const Animal* meta = new Animal();
-	const Animal* i = new Dog();;
-	const Animal* j = new Cat();
+# include "Animal.hpp"
 
-	std::cout << i->getType() << " " << std::endl;
-	std::cout << j->getType() << " " << std::endl;
+class Dog : public Animal {
+	public:
+		Dog();
+		~Dog();
 
-	meta->makeSound();
-	i->makeSound();
-	j->makeSound();
+		void makeSound(void) const;
+};
 
-	return (0);
-}
+#endif

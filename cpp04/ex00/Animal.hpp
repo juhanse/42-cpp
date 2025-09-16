@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:51:04 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/16 12:02:15 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/16 13:49:13 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@
 # include <string>
 
 class Animal {
-	private:
+	protected:
 		std::string	_type;
 
 	public:
-		Animal(void);
-		Animal(const std::string& name);
-		~Animal(void);
+		Animal();
+		~Animal();
+
+		virtual void makeSound(void) const;
 
 		std::string getType(void) const;
 };
