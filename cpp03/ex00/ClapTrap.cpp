@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 12:29:23 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/16 11:38:17 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/16 11:45:20 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,15 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 }
 
 void ClapTrap::attack(const std::string& target) {
-
+	std::cout << "ClapTrap " << this->getName() << " attacks " << target << ", causing ? points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
-
+	this->_attackDamage -= amount;
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
-
+	this->_hitPoints += amount;
 }
 
 std::string ClapTrap::getName(void) const {

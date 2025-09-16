@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:29 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/16 11:37:50 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/16 11:45:44 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 int	main(void) {
 	ClapTrap one;
 	ClapTrap two("Two");
+
+	one.attack("Bob");
 
 	return (0);
 }
