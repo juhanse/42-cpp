@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:51:04 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/16 13:49:13 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/17 11:22:30 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Animal {
 
 	public:
 		Animal();
-		~Animal();
+		virtual ~Animal();
 
 		virtual void makeSound(void) const;
 
