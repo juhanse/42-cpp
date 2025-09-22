@@ -6,44 +6,28 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 16:02:21 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/18 16:03:06 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/22 22:08:30 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
+# include "ClapTrap.hpp"
 # include <iostream>
 # include <string>
 
-class ScavTrap {
-	protected:
-		std::string		name;
-		unsigned int	hitPoints;
-		unsigned int	energyPoints;
-		unsigned int	attackDamage;
-
+class ScavTrap : public ClapTrap {
 	public:
-		ClapTrap(void);
-		ClapTrap(const std::string& name);
-		ClapTrap(const ClapTrap& other);
-		virtual ~ClapTrap(void);
+		ScavTrap(void);
+		ScavTrap(const std::string& name);
+		ScavTrap(const ScavTrap& other);
+		~ScavTrap(void);
 
-		ClapTrap& operator=(const ClapTrap& other);
+		ScavTrap& operator=(const ScavTrap& other);
 
-		virtual void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-
-		std::string getName(void) const;
-		unsigned int getHitPoints(void) const;
-		unsigned int getEnergyPoints(void) const;
-		unsigned int getAttackDamage(void) const;
-	
-		void setName(const std::string& name);
-		void setHitPoints(unsigned int hitPoints);
-		void setEnergyPoints(unsigned int energyPoints);
-		void setAttackDamage(unsigned int attackDamage);
+		void attack(const std::string& target);
+		void guardGate(void);
 };
 
 #endif
