@@ -6,20 +6,22 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:29 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/18 13:38:24 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/22 22:17:30 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void) {
-	ClapTrap obj("One");
-	obj.attack("Two");
-	obj.takeDamage(3);
-	obj.beRepaired(5);
-	obj.attack("Three");
-	obj.takeDamage(15);
-	obj.beRepaired(3);
+	ScavTrap john("John");
+	ScavTrap doe("Doe");
 
-	return (0);
+	john.attack("Doe");
+	doe.takeDamage(john.getAttackDamage());
+	doe.beRepaired(5);
+	doe.attack("John");
+	john.takeDamage(doe.getAttackDamage());
+	john.beRepaired(3);
+	doe.guardGate();
 }
