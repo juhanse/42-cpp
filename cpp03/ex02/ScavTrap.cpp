@@ -6,12 +6,12 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 16:02:09 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/22 22:12:50 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/25 23:16:43 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(void) : ClapTrap() {
 	std::cout << "ScavTrap default constructor has been called!" << std::endl;
@@ -46,8 +46,7 @@ void ScavTrap::attack(const std::string& target) {
 		return ;
 	}
 	this->energyPoints--;
-	std::cout << "ScavTrap " << this->name << " attacks " << target
-			  << ", causing " << this->attackDamage << " points of damage!" << std::endl;
+	std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
 }
 
 void ScavTrap::guardGate(void) {

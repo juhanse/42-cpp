@@ -6,12 +6,12 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 15:03:46 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/24 15:03:51 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/25 23:16:51 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.h"
-#include "ClapTrap.h"
+#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 FragTrap::FragTrap(void) : ClapTrap()
 {
@@ -27,7 +27,6 @@ FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other)
 {
 	std::cout << "<FragTrap copy-constructor has been called!> Status: Cloned" << std::endl;
 }
-
 
 FragTrap::~FragTrap()
 {
