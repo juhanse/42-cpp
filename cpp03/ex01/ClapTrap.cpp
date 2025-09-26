@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 12:29:23 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/25 23:13:51 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/26 19:35:54 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 ClapTrap::ClapTrap(void) : hitPoints(10), energyPoints(10), attackDamage(0) {
 	std::cout << "ClapTrap " << this->name << " has been created with default constructor." << std::endl;
-	return ;
 }
 
 ClapTrap::ClapTrap(const std::string& name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
 	std::cout << "ClapTrap " << this->name << " has been created with name constructor." << std::endl;
-	return ;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other) {
