@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/26 17:41:50 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/26 18:00:39 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 
-class Bureaucrat {
+class Bureaucrat : public std::exception {
 	private:
 		std::string		_name;
 		unsigned int	_grade;
@@ -36,6 +36,9 @@ class Bureaucrat {
 
 		void promote(void);
 		void demote(void);
+
+		GradeTooHighException(void);
+		const char* what() const;
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat);

@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 12:29:23 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/26 17:41:00 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/26 17:53:39 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,10 @@ void Bureaucrat::promote(void) {
 
 void Bureaucrat::demote(void) {
 	this->_grade++;
+}
+
+const char* what() const {
+	return "COUCOUUU";
 }
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat) {
