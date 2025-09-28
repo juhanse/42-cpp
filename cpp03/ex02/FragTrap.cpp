@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 15:03:46 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/26 19:38:47 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/09/28 23:48:07 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@ FragTrap::FragTrap(void) : ClapTrap() {
 }
 
 FragTrap::FragTrap(const std::string& name) : ClapTrap(name) {
-	std::cout << "FragTrap " << this->name << " has been created with name constructor." << std::endl;
+	std::cout << "FragTrap " << this->_name << " has been created with name constructor." << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other) {
-	std::cout << "FragTrap copy constructor called for " << other.name << std::endl;
+	std::cout << "FragTrap copy constructor called for " << other.getName() << std::endl;
 }
 
 FragTrap::~FragTrap() {
-    std::cout << "FragTrap destructor called for " << this->name << std::endl;
+    std::cout << "FragTrap destructor called for " << this->_name << std::endl;
 }
 
 void FragTrap::highFivesGuys() {
-    std::cout << "FragTrap " << this->name << " requests a high five." << std::endl;
+    std::cout << "FragTrap " << this->_name << " requests a high five." << std::endl;
 }
