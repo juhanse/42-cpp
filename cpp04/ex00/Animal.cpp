@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:50:49 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/06 17:42:05 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/06 17:54:12 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,20 @@ Animal::Animal(const std::string& type) : _type(type) {
 }
 
 Animal::Animal(const Animal& other) {
-	std::cout << "Constructor by copy : " << other.getType() << " called" << std::endl;
+	std::cout << "Constructor by copy Animal: " << other.getType() << " called" << std::endl;
 	*this = other;
 }
 
 Animal::~Animal(void) {
 	std::cout << "Destructor Animal called" << std::endl;
+}
+
+Animal& Animal::operator=(const Animal& other) {
+	std::cout << "Copy assignment operator Animal called" << std::endl;
+	if (this != &other) {
+		this->_type = other.getType();
+	}
+	return *this;
 }
 
 void Animal::makeSound(void) const {

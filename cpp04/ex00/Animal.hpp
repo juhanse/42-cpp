@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:51:04 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/06 16:43:28 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/06 17:48:51 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class Animal {
 		Animal(const std::string& type);
 		Animal(const Animal& other);
 		virtual ~Animal(void);
+
+		Animal& operator=(const Animal& other);
 
 		virtual void makeSound(void) const;
 
