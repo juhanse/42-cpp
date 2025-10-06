@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:50:49 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/06 17:54:12 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/07 00:43:24 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ Animal::Animal(const std::string& type) : _type(type) {
 	std::cout << "Constructor Animal: " << this->_type << " created" << std::endl;
 }
 
-Animal::Animal(const Animal& other) {
+Animal::Animal(const Animal& other) : _type(other._type) {
 	std::cout << "Constructor by copy Animal: " << other.getType() << " called" << std::endl;
-	*this = other;
 }
 
 Animal::~Animal(void) {
