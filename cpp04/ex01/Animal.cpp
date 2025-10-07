@@ -6,25 +6,44 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:50:49 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/16 13:47:40 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/07 00:43:24 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal() : _type("Animal") {
-	std::cout << "Animal constructor has been created." << std::endl;
-	return ;
+Animal::Animal(void) : _type("Default") {
+	std::cout << "Constructor Animal: " << this->_type << " created" << std::endl;
 }
 
-Animal::~Animal() {
-	std::cout << "Animal destructor called" << std::endl;
+Animal::Animal(const std::string& type) : _type(type) {
+	std::cout << "Constructor Animal: " << this->_type << " created" << std::endl;
+}
+
+Animal::Animal(const Animal& other) : _type(other._type) {
+	std::cout << "Constructor by copy Animal: " << other.getType() << " called" << std::endl;
+}
+
+Animal::~Animal(void) {
+	std::cout << "Destructor Animal called" << std::endl;
+}
+
+Animal& Animal::operator=(const Animal& other) {
+	std::cout << "Copy assignment operator Animal called" << std::endl;
+	if (this != &other) {
+		this->_type = other.getType();
+	}
+	return *this;
 }
 
 void Animal::makeSound(void) const {
-	std::cout << "Some generic animal sound" << std::endl;
+	std::cout << "Default animal sound" << std::endl;
 }
 
 std::string Animal::getType(void) const {
-	return _type;
+	return (this->_type);
+}
+
+void Animal::setType(const std::string& type) {
+	this->_type = type;
 }

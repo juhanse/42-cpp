@@ -6,11 +6,11 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 11:26:44 by juhanse           #+#    #+#              #
-#    Updated: 2025/09/17 11:25:07 by juhanse          ###   ########.fr        #
+#    Updated: 2025/10/07 21:45:19 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = animal
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -19,7 +19,7 @@ COLOUR_RED=\033[0;31m
 COLOUR_BLUE=\033[0;34m
 COLOUR_END=\033[0m
 
-SRC = Animal.cpp Dog.cpp Cat.cpp Brain.cpp Brain.hpp main.cpp
+SRC = Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
 SRC_OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
