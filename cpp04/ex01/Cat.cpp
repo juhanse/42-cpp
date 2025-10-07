@@ -6,26 +6,29 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:50:49 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/07 00:42:54 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/07 21:59:36 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 Cat::Cat(void) : Animal("Cat") {
+	brain = new Brain();
 	std::cout << "Constructor Cat: " << this->_type << " created" << std::endl;
 }
 
 Cat::Cat(const std::string& type) : Animal(type) {
+	brain = new Brain();
 	std::cout << "Constructor Cat: " << this->_type << " created" << std::endl;
 }
 
 Cat::Cat(const Cat& other) : Animal(other) {
-	*this = other;
+	brain = new Brain(*other.brain);
 	std::cout << "Constructor by copy Cat: " << other.getType() << " called" << std::endl;
 }
 
 Cat::~Cat(void) {
+	delete brain;
 	std::cout << "Destructor Cat called" << std::endl;
 }
 
@@ -33,6 +36,8 @@ Cat& Cat::operator=(const Cat& other) {
 	std::cout << "Copy assignment operator Cat called" << std::endl;
 	if (this != &other) {
 		this->_type = other.getType();
+		delete this->brain;
+		this->brain = new Brain(*other.brain);
 	}
 	return *this;
 }
