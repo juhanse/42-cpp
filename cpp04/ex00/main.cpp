@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:29 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/16 13:44:34 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/07 18:18:39 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@
 
 int	main(void) {
 	const Animal* meta = new Animal();
-	const Animal* i = new Dog();;
-	const Animal* j = new Cat();
-
+	const Animal* i = new Cat();
+	const Animal* j = new Dog();
 	std::cout << i->getType() << " " << std::endl;
 	std::cout << j->getType() << " " << std::endl;
 
-	meta->makeSound();
 	i->makeSound();
 	j->makeSound();
+	meta->makeSound();
+
+	delete meta;
+	delete i;
+	delete j;
 
 	return (0);
 }
