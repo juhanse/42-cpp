@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:51:04 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/07 21:58:42 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/08 15:58:12 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class Cat : public Animal {
 		Cat& operator=(const Cat& other);
 
 		void makeSound(void) const;
+
+		Brain* getBrain(void) const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:50:49 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/07 21:59:36 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/08 15:58:28 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,8 @@ Cat& Cat::operator=(const Cat& other) {
 
 void Cat::makeSound(void) const {
 	std::cout << "Miaaawww" << std::endl;	
+}
+
+Brain* Cat::getBrain(void) const {
+	return this->brain;
 }
