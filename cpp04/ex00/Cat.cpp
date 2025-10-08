@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:50:49 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/07 00:42:54 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/08 15:21:14 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ Cat::Cat(const std::string& type) : Animal(type) {
 }
 
 Cat::Cat(const Cat& other) : Animal(other) {
-	*this = other;
 	std::cout << "Constructor by copy Cat: " << other.getType() << " called" << std::endl;
 }
 

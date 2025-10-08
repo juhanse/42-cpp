@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:50:49 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/07 18:17:08 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/08 15:22:04 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ Dog::Dog(const std::string& type) : Animal(type) {
 }
 
 Dog::Dog(const Dog& other) : Animal(other) {
-	*this = other;
 	std::cout << "Constructor by copy Dog: " << other.getType() << " called" << std::endl;
 }
 
