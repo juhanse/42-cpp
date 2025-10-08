@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 21:55:12 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/07 21:55:51 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/08 15:48:20 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Brain::Brain(void) {
 	for (int i = 0; i < 100; i++) {
-		this->_ideas[i] = "Empty";
+		this->_ideas[i] = "Idea";
 	}
 	std::cout << "Brain default constructor called" << std::endl;
 }
