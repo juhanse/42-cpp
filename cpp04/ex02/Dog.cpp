@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:50:49 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/08 14:00:57 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/08 16:12:49 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,8 @@ Dog& Dog::operator=(const Dog& other) {
 
 void Dog::makeSound(void) const {
 	std::cout << "Waouffff" << std::endl;	
+}
+
+Brain* Dog::getBrain(void) const {
+	return this->brain;
 }

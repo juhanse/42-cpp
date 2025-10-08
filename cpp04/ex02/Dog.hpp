@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:51:04 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/08 13:59:51 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/08 16:12:40 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class Dog : public AAnimal {
 		Dog& operator=(const Dog& other);
 
 		void makeSound(void) const;
+
+		Brain* getBrain(void) const;
 };
 
 #endif
