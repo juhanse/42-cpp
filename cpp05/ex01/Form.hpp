@@ -6,14 +6,14 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/15 17:50:31 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/15 17:55:45 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 # define FORM_HPP
 
-# include <iostream>
+# include "Bureaucrat.hpp"
 
 class Form {
 	private:
@@ -31,14 +31,14 @@ class Form {
 		Form& operator=(const Form& other);
 
 		std::string getName(void) const;
-		bool getIsSigned(void) const;
 		unsigned int getGradeSign(void) const;
 		unsigned int getGradeExecute(void) const;
 
 		void setName(const std::string& name);
-		void setSigned(bool isSigned);
 		void setGradeSign(unsigned int grade);
 		void setGradeExecute(unsigned int grade);
+
+		void beSigned(const Bureaucrat& bureaucrat);
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& form);
