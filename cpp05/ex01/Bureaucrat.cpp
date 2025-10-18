@@ -12,20 +12,18 @@
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(void) : _name("Default"), _grade(10) {
-	if (_grade < 1)
-		throw GradeTooHighException();
-	if (_grade > 150)
-		throw GradeTooLowException();
-
+Bureaucrat::Bureaucrat() : _name("Default"), _grade(10) {
 	std::cout << "Default constructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const std::string& name, unsigned int grade) : _name(name), _grade(grade) {
-	if (grade < 1)
+Bureaucrat::Bureaucrat(const std::string& name, unsigned int grade) : _name(name) {
+	if (grade < 1) {
 		throw GradeTooHighException();
-	if (grade > 150)
+	} else if (grade > 150) {
 		throw GradeTooLowException();
+	} else {
+		this->_grade = grade;
+	}
 
 	std::cout << "Bureaucrat " << this->_name << " has been created with name constructor." << std::endl;
 }
@@ -60,27 +58,20 @@ void Bureaucrat::setName(const std::string& name) {
 	this->_name = name;
 }
 
-void Bureaucrat::setGrade(unsigned int grade) {
-	if (grade < 1)
-		throw GradeTooHighException();
-	if (grade > 150)
-		throw GradeTooLowException();
-
-	this->_grade = grade;
-}
-
 void Bureaucrat::promote(void) {
-	if (_grade - 1 < 1)
+	if (_grade == 1) {
 		throw GradeTooHighException();
-
-	this->_grade--;
+	} else {
+		this->_grade--;
+	}
 }
 
 void Bureaucrat::demote(void) {
-	if (_grade + 1 > 150)
+	if (_grade == 150) {
 		throw GradeTooLowException();
-
-	this->_grade++;
+	} else {
+		this->_grade++;
+	}
 }
 
 const char *Bureaucrat::GradeTooLowException::what(void) const throw() {
