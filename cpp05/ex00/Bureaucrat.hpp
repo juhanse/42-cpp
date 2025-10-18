@@ -17,21 +17,19 @@
 
 class Bureaucrat {
 	private:
-		std::string		_name;
-		unsigned int	_grade;
+		const std::string	_name;
+		int					_grade;
 
 	public:
 		Bureaucrat();
-		Bureaucrat(const std::string& name, unsigned int grade);
+		Bureaucrat(const std::string& name,	 int grade);
 		Bureaucrat(const Bureaucrat& copy);
 		~Bureaucrat();
 
 		Bureaucrat& operator=(const Bureaucrat& other);
 
 		std::string getName(void) const;
-		unsigned int getGrade(void) const;
-
-		void setName(const std::string& name);
+		int getGrade(void) const;
 
 		void promote(void);
 		void demote(void);
