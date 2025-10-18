@@ -33,6 +33,7 @@ class Bureaucrat {
 
 		void promote(void);
 		void demote(void);
+		void signForm(Form &form);
 
 		class GradeTooLowException : public std::exception {
 			public:
