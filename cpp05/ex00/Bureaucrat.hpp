@@ -21,9 +21,7 @@ class Bureaucrat {
 		unsigned int	_grade;
 
 	public:
-		Bureaucrat(void);
-		Bureaucrat(const std::string& name);
-		Bureaucrat(unsigned int grade);
+		Bureaucrat();
 		Bureaucrat(const std::string& name, unsigned int grade);
 		Bureaucrat(const Bureaucrat& copy);
 		~Bureaucrat();
