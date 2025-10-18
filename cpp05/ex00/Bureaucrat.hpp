@@ -32,7 +32,6 @@ class Bureaucrat {
 		unsigned int getGrade(void) const;
 
 		void setName(const std::string& name);
-		void setGrade(unsigned int grade);
 
 		void promote(void);
 		void demote(void);
