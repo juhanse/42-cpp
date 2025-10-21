@@ -13,16 +13,22 @@
 #ifndef ROBOTOMYREQUESTFORM_HPP
 # define ROBOTOMYREQUESTFORM_HPP
 
-# include <iostream>
+# include "AForm.hpp"
 
-class RobotomyRequestForm {
+class RobotomyRequestForm : public AForm {
+	private:
+		const std::string	_target;
+
 	public:
 		RobotomyRequestForm();
-		RobotomyRequestForm(const std::string& name,	 int grade);
+		RobotomyRequestForm(const std::string& target);
 		RobotomyRequestForm(const RobotomyRequestForm& copy);
 		~RobotomyRequestForm();
 
 		RobotomyRequestForm& operator=(const RobotomyRequestForm& other);
+
+		const std::string& getTarget(void) const;
+		void execute(const Bureaucrat& executor) const;
 };
 
 std::ostream& operator<<(std::ostream& os, const RobotomyRequestForm& robotomy);
