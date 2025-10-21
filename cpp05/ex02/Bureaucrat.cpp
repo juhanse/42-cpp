@@ -59,7 +59,7 @@ void Bureaucrat::demote(void) {
 	}
 }
 
-void Bureaucrat::signForm(Form &form) {
+void Bureaucrat::signForm(AForm &form) {
 	try {
 		form.beSigned(*this);
 		std::cout << this->_name << " signed " << form.getName() << std::endl;
@@ -68,7 +68,7 @@ void Bureaucrat::signForm(Form &form) {
 	}
 }
 
-void Bureaucrat::executeForm(const AForm &form) {
+void Bureaucrat::executeForm(const AForm &form) const {
 	try {
 		form.execute(*this);
 		std::cout << _name << " executed " << form.getName() << std::endl;
