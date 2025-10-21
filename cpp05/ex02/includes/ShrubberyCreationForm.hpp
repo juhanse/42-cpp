@@ -13,16 +13,22 @@
 #ifndef SHRUBBERYCREATIONFORM_HPP
 # define SHRUBBERYCREATIONFORM_HPP
 
-# include <iostream>
+# include "AForm.hpp"
 
-class ShrubberyCreationForm {
+class ShrubberyCreationForm : public AForm {
+	private:
+		const std::string	_target;
+
 	public:
 		ShrubberyCreationForm();
-		ShrubberyCreationForm(const std::string& name,	 int grade);
+		ShrubberyCreationForm(const std::string& target);
 		ShrubberyCreationForm(const ShrubberyCreationForm& copy);
 		~ShrubberyCreationForm();
 
 		ShrubberyCreationForm& operator=(const ShrubberyCreationForm& other);
+
+		const std::string& getTarget(void) const;
+		void execute(const Bureaucrat& executor) const;
 };
 
 std::ostream& operator<<(std::ostream& os, const ShrubberyCreationForm& shrubbery);
