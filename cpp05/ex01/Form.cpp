@@ -6,30 +6,21 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:43:56 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/15 18:29:09 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/21 15:28:10 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(void) : _name("Default"), _isSigned(false), _gradeSign(1), _gradeExecute(2) {
-	std::cout << "Default Form constructor called" << std::endl;
-}
+Form::Form(void) : _name("Default"), _isSigned(false), _gradeSign(1), _gradeExecute(2) {}
 
-Form::Form(const std::string& name, const int gradeSign, const int gradeExecute) : _name(name), _isSigned(false), _gradeSign(gradeSign), _gradeExecute(gradeExecute) {
-	std::cout << "Form " << this->_name << " has been created with name constructor." << std::endl;
-}
+Form::Form(const std::string& name, const int gradeSign, const int gradeExecute) : _name(name), _isSigned(false), _gradeSign(gradeSign), _gradeExecute(gradeExecute) {}
 
-Form::Form(const Form& copy) : _name(copy._name), _isSigned(copy._isSigned), _gradeSign(copy._gradeSign), _gradeExecute(copy._gradeExecute) {
-	std::cout << "Copy Form constructor called" << std::endl;
-}
+Form::Form(const Form& copy) : _name(copy._name), _isSigned(copy._isSigned), _gradeSign(copy._gradeSign), _gradeExecute(copy._gradeExecute) {}
 
-Form::~Form() {
-	std::cout << "Destructor Form called" << std::endl;
-}
+Form::~Form() {}
 
 Form& Form::operator=(const Form& other) {
-	std::cout << "Copy Form assignment operator called" << std::endl;
 	if (this != &other) {
 		this->_isSigned = other._isSigned;
 	}
