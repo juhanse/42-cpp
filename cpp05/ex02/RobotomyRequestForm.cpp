@@ -6,11 +6,12 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 00:25:22 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/22 00:25:22 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:21:05 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RobotomyRequestForm.hpp"
+#include "includes/RobotomyRequestForm.hpp"
+#include "includes/Bureaucrat.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm() : AForm("Robotomy Request", 72, 45), _target("Default") {}
 
@@ -21,10 +22,7 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& copy) : AFor
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& other) {
-	if (this != &other) {
-		AForm::operator=(other);
-		this->_target = other._target;
-	}
+	(void)other;
 	return *this;
 }
 
