@@ -6,12 +6,14 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 00:39:01 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/22 00:39:01 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:25:41 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INTERN_HPP
-# define INTERN_HPP
+#pragma once
+
+# include <iostream>
+# include <string>
 
 # include "AForm.hpp"
 
@@ -24,5 +26,3 @@ class Intern {
 		Intern& operator=(const Intern& other);
 		AForm *makeForm(const std::string& formName, const std::string& target);
 };
-
-#endif

@@ -6,11 +6,11 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 00:40:53 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/22 00:40:53 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:27:09 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Intern.hpp"
+#include "includes/Intern.hpp"
 
 Intern::Intern() {}
 
