@@ -6,14 +6,16 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/26 19:02:18 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:05:15 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#pragma once
 
 # include <iostream>
+# include <string>
+
+class Form;
 
 class Bureaucrat {
 	private:
@@ -33,7 +35,7 @@ class Bureaucrat {
 
 		void promote(void);
 		void demote(void);
-		void signForm(Form &form);
+		void signForm(Form& form);
 
 		class GradeTooLowException : public std::exception {
 			public:
@@ -47,5 +49,3 @@ class Bureaucrat {
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat);
-
-#endif

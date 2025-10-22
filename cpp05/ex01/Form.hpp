@@ -6,14 +6,16 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/15 18:18:39 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:00:43 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#pragma once
 
-# include "Bureaucrat.hpp"
+# include <iostream>
+# include <string>
+
+class Bureaucrat;
 
 class Form {
 	private:
@@ -49,5 +51,3 @@ class Form {
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& form);
-
-#endif

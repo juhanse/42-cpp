@@ -6,11 +6,12 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 12:29:23 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/21 15:27:45 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:07:36 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(10) {}
 
@@ -59,7 +60,7 @@ void Bureaucrat::demote(void) {
 	}
 }
 
-void Bureaucrat::signForm(Form &form) {
+void Bureaucrat::signForm(Form& form) {
 	try {
 		form.beSigned(*this);
 		std::cout << this->_name << " signed " << form.getName() << std::endl;

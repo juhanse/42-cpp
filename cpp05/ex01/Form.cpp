@@ -6,11 +6,12 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:43:56 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/21 15:28:10 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:08:09 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form(void) : _name("Default"), _isSigned(false), _gradeSign(1), _gradeExecute(2) {}
 
