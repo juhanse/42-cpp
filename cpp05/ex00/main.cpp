@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:29 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/21 15:26:46 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 13:51:46 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,28 @@ int	main(void) {
 	std::cout << min << std::endl;
 	std::cout << max << std::endl;
 
+	std::cout << "#1 step" << std::endl;
 	try {
 		min.demote();
 	} catch (const std::exception &e) {
 		std::cout << min.getName() << " catch " << e.what() << std::endl;
 	}
 
+	std::cout << "#2 step" << std::endl;
 	try {
 		max.demote();
 	} catch (const std::exception &e) {
 		std::cout << max.getName() << " catch " << e.what() << std::endl;
 	}
 
+	std::cout << "#3 step" << std::endl;
 	try {
 		min.promote();
 	} catch (const std::exception &e) {
 		std::cout << min.getName() << " catch " << e.what() << std::endl;
 	}
 
+	std::cout << "#4 step" << std::endl;
 	try {
 		max.promote();
 		max.promote();
@@ -44,9 +48,11 @@ int	main(void) {
 		std::cout << max.getName() << " catch " << e.what() << std::endl;
 	}
 
+	std::cout << "#5 step" << std::endl;
 	std::cout << min << std::endl;
 	std::cout << max << std::endl;
 
+	std::cout << "Assignment operator" << std::endl;
 	min = max;
 
 	std::cout << min << std::endl;
