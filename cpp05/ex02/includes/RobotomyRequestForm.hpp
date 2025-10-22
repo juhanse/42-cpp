@@ -6,12 +6,14 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/21 15:21:21 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:03:40 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-# define ROBOTOMYREQUESTFORM_HPP
+#pragma once
+
+# include <iostream>
+# include <string>
 
 # include "AForm.hpp"
 
@@ -32,5 +34,3 @@ class RobotomyRequestForm : public AForm {
 };
 
 std::ostream& operator<<(std::ostream& os, const RobotomyRequestForm& robotomy);
-
-#endif

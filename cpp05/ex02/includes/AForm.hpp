@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/15 18:18:39 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:03:08 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AFORM_HPP
-# define AFORM_HPP
+#pragma once
 
-# include "Bureaucrat.hpp"
+# include <iostream>
+# include <string>
+
+class Bureaucrat;
 
 class AForm {
 	private:
@@ -55,5 +57,3 @@ class AForm {
 };
 
 std::ostream& operator<<(std::ostream& os, const AForm& form);
-
-#endif
