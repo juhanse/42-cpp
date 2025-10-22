@@ -6,11 +6,11 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 11:26:44 by juhanse           #+#    #+#              #
-#    Updated: 2025/10/22 21:40:53 by juhanse          ###   ########.fr        #
+#    Updated: 2025/10/22 21:54:42 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = cast
+NAME = converter
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
