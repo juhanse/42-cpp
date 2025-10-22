@@ -6,11 +6,12 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 00:21:26 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/22 00:21:26 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:21:09 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PresidentialPardonForm.hpp"
+#include "includes/PresidentialPardonForm.hpp"
+#include "includes/Bureaucrat.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm() : AForm("Presidential Pardon", 25, 5), _target("Default") {}
 
@@ -21,10 +22,7 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& cop
 PresidentialPardonForm::~PresidentialPardonForm() {}
 
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& other) {
-	if (this != &other) {
-		AForm::operator=(other);
-		this->_target = other._target;
-	}
+	(void)other;
 	return *this;
 }
 

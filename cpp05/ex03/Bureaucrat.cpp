@@ -6,11 +6,12 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 12:29:23 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/21 15:28:50 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:11:27 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "includes/Bureaucrat.hpp"
+#include "includes/AForm.hpp"
 
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(10) {}
 

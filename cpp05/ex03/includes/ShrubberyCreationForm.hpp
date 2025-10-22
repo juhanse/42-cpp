@@ -6,12 +6,15 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/21 15:20:13 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:19:27 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-# define SHRUBBERYCREATIONFORM_HPP
+#pragma once
+
+# include <iostream>
+# include <string>
+# include <fstream>
 
 # include "AForm.hpp"
 
@@ -32,5 +35,3 @@ class ShrubberyCreationForm : public AForm {
 };
 
 std::ostream& operator<<(std::ostream& os, const ShrubberyCreationForm& shrubbery);
-
-#endif

@@ -6,14 +6,16 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/09/26 19:02:18 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:03:23 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#pragma once
 
 # include <iostream>
+# include <string>
+
+class AForm;
 
 class Bureaucrat {
 	private:
@@ -48,5 +50,3 @@ class Bureaucrat {
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat);
-
-#endif

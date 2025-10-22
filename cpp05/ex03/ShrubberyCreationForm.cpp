@@ -6,11 +6,12 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 00:29:55 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/22 00:29:55 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:20:31 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ShrubberyCreationForm.hpp"
+#include "includes/ShrubberyCreationForm.hpp"
+#include "includes/Bureaucrat.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Shrubbery Creation", 145, 137), _target("Default") {}
 
@@ -21,10 +22,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& copy) 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other) {
-	if (this != &other) {
-		AForm::operator=(other);
-		this->_target = other._target;
-	}
+	(void)other;
 	return *this;
 }
 
@@ -40,7 +38,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat& executor) const {
 		throw AForm::GradeTooLowException();
 	}
 
-	std::ofstream outfile(this->_target + "_shrubbery");
+	std::ofstream outfile((this->_target + "_shrubbery").c_str());
 	if (!outfile) {
 		std::cerr << "Error: Could not create file " << this->_target + "_shrubbery" << std::endl;
 		return;
