@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/22 15:03:40 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:21:39 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 # include <iostream>
 # include <string>
+# include <cstdlib>
 
 # include "AForm.hpp"
 
