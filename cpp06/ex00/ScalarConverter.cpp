@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 12:29:23 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/22 21:47:12 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/24 13:37:06 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,24 @@ ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other) {
 		_double = other._double;
 	}
 	return *this;
+}
+
+void	ScalarConverter::convert(const std::string& str) {
+	std::cout << "CONVERT :" << std::endl;
+	// std::cout << str << std::endl;
+	// std::cout << const basic_string<char>str << std::endl;
+
+	int i = static_cast<int>(str);
+    char c = static_cast<char>(i);
+    float f = static_cast<float>(str);
+    double d = static_cast<double>(str);
+
+    if (std::isprint(c))
+        std::cout << "char: '" << c << "'" << std::endl;
+    else
+        std::cout << "char: Non displayable" << std::endl;
+
+    std::cout << "int: " << i << std::endl;
+    std::cout << "float: " << f << "f" << std::endl;
+    std::cout << "double: " << d << std::endl;
 }
