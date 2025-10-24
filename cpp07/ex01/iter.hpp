@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:08:12 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/21 00:19:07 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/24 11:47:37 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 #define ITER_HPP
 
 #include <iostream>
+#include <string>
 
 template <typename T>
-void	iter( T* array, size_t length, void (*func)(T&) ) {
-	for ( size_t i = 0; i < length; i++ ) {
-		func( array[i] );
+void	iter(T* array, const size_t length, void (*function)(T&)) {
+	for (size_t i = 0; i < length; i++) {
+		function(array[i]);
 	}
 }
 
