@@ -6,35 +6,22 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 12:29:23 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/24 13:37:06 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/30 23:48:54 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-char ScalarConverter::_char = 0;
-int ScalarConverter::_int = 0;
-float ScalarConverter::_float = 0.0f;
-double ScalarConverter::_double = 0.0;
-
 ScalarConverter::ScalarConverter() {}
 
 ScalarConverter::ScalarConverter(const ScalarConverter& copy) {
-	_char = copy._char;
-	_int = copy._int;
-	_float = copy._float;
-	_double = copy._double;
+	(void)copy;
 }
 
 ScalarConverter::~ScalarConverter() {}
 
 ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other) {
-	if (this != &other) {
-		_char = other._char;
-		_int = other._int;
-		_float = other._float;
-		_double = other._double;
-	}
+	(void)other;
 	return *this;
 }
 
@@ -56,4 +43,9 @@ void	ScalarConverter::convert(const std::string& str) {
     std::cout << "int: " << i << std::endl;
     std::cout << "float: " << f << "f" << std::endl;
     std::cout << "double: " << d << std::endl;
+
+	std::cout << "char: impossible\n";
+	std::cout << "int: impossible\n";
+	std::cout << "float: impossible\n";
+	std::cout << "double: impossible\n";
 }

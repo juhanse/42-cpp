@@ -6,20 +6,18 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/22 21:46:16 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/10/30 23:46:40 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 # include <iostream>
+# include <string>
 
 class ScalarConverter {
 	private:
-		static char _char;
-		static int _int;
-		static float _float;
-		static double _double;
+		static void	convert(const std::string& str);
 
 	public:
 		ScalarConverter();
@@ -27,6 +25,4 @@ class ScalarConverter {
 		~ScalarConverter();
 
 		ScalarConverter& operator=(const ScalarConverter& other);
-
-		static void	convert(const std::string& str);
 };
