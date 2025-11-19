@@ -26,26 +26,46 @@ ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other) {
 }
 
 void	ScalarConverter::convert(const std::string& str) {
-	std::cout << "CONVERT :" << std::endl;
-	// std::cout << str << std::endl;
-	// std::cout << const basic_string<char>str << std::endl;
+	double value = 0.0;
+	bool isChar = false;
+	
+	// Détection char
+	if (str.length() == 1 && !isdigit(str[0])) {
+		value = static_cast<double>(str[0]);
+		isChar = true;
+	} else {
+		try {
+			size_t pos;
+			value = std::stod(str, &pos); // convertit en double
+			if (pos != str.length() && str.back() != 'f')
+				throw std::invalid_argument("invalid input");
+		} catch (...) {
+			std::cout << "Error: invalid str" << std::endl;
+			return;
+		}
+	}
 
-	int i = static_cast<int>(str);
-    char c = static_cast<char>(i);
-    float f = static_cast<float>(str);
-    double d = static_cast<double>(str);
+	// Char
+	std::cout << "char: ";
+	if (isnan(value) || value < 0 || value > 127)
+		std::cout << "impossible";
+	else if (!isprint(static_cast<char>(value)))
+		std::cout << "Non displayable";
+	else
+		std::cout << "'" << static_cast<char>(value) << "'";
+	std::cout << std::endl;
 
-    if (std::isprint(c))
-        std::cout << "char: '" << c << "'" << std::endl;
-    else
-        std::cout << "char: Non displayable" << std::endl;
+	// Int
+	std::cout << "int: ";
+	if (isnan(value) || value > std::numeric_limits<int>::max() || value < std::numeric_limits<int>::min())
+		std::cout << "impossible";
+	else
+		std::cout << static_cast<int>(value);
+	std::cout << std::endl;
 
-    std::cout << "int: " << i << std::endl;
-    std::cout << "float: " << f << "f" << std::endl;
-    std::cout << "double: " << d << std::endl;
+	// Float
+	std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(value) << "f" << std::endl;
 
-	std::cout << "char: impossible\n";
-	std::cout << "int: impossible\n";
-	std::cout << "float: impossible\n";
-	std::cout << "double: impossible\n";
+	// Double
+	std::cout << "double: " << std::fixed << std::setprecision(1) << value << std::endl;
 }
