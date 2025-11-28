@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 12:29:23 by juhanse           #+#    #+#             */
-/*   Updated: 2025/11/04 13:54:40 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/11/28 17:53:16 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,46 +26,42 @@ ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other) {
 }
 
 void	ScalarConverter::convert(const std::string& str) {
-	double value = 0.0;
-	bool isChar = false;
-	
-	// Détection char
-	if (str.length() == 1 && !isdigit(str[0])) {
-		value = static_cast<double>(str[0]);
-		isChar = true;
-	} else {
-		try {
-			size_t pos;
-			value = std::stod(str, &pos); // convertit en double
-			if (pos != str.length() && str.back() != 'f')
-				throw std::invalid_argument("invalid input");
-		} catch (...) {
-			std::cout << "Error: invalid str" << std::endl;
-			return;
-		}
+	std::size_t	pos = 0;
+	double		value = std::strtod(str.c_str(), NULL);
+
+	if (str.empty() || (value == 0.0 && str[pos] != '0' && str[pos] != '-' && str[pos] != '+')) {
+		std::cout << "char: impossible" << std::endl;
+		std::cout << "int: impossible" << std::endl;
+		std::cout << "float: impossible" << std::endl;
+		std::cout << "double: impossible" << std::endl;
+		return ;
 	}
 
-	// Char
-	std::cout << "char: ";
-	if (isnan(value) || value < 0 || value > 127)
-		std::cout << "impossible";
-	else if (!isprint(static_cast<char>(value)))
-		std::cout << "Non displayable";
-	else
-		std::cout << "'" << static_cast<char>(value) << "'";
+	// Char conversion
+	if (value < 0 || value > 127 || isnan(value)) {
+		std::cout << "char: impossible" << std::endl;
+	} else if (!isprint(static_cast<char>(value))) {
+		std::cout << "char: Non displayable" << std::endl;
+	} else {
+		std::cout << "char: '" << static_cast<char>(value) << "'" << std::endl;
+	}
+
+	// Int conversion
+	if (value < static_cast<double>(INT32_MIN) || value > static_cast<double>(INT32_MAX) || isnan(value)) {
+		std::cout << "int: impossible" << std::endl;
+	} else {
+		std::cout << "int: " << static_cast<int>(value) << std::endl;
+	}
+
+	// Float conversion
+	std::cout << "float: " << static_cast<float>(value);
+	if (static_cast<float>(value) - static_cast<int>(value) == 0)
+		std::cout << ".0";
+	std::cout << "f" << std::endl;
+
+	// Double conversion
+	std::cout << "double: " << value;
+	if (value - static_cast<int>(value) == 0)
+		std::cout << ".0";
 	std::cout << std::endl;
-
-	// Int
-	std::cout << "int: ";
-	if (isnan(value) || value > std::numeric_limits<int>::max() || value < std::numeric_limits<int>::min())
-		std::cout << "impossible";
-	else
-		std::cout << static_cast<int>(value);
-	std::cout << std::endl;
-
-	// Float
-	std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(value) << "f" << std::endl;
-
-	// Double
-	std::cout << "double: " << std::fixed << std::setprecision(1) << value << std::endl;
 }
