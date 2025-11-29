@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 12:29:23 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/22 21:54:16 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/11/30 00:15:29 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Serializer& Serializer::operator=(const Serializer& other) {
 	return *this;
 }
 
-uintptr_t	Serializer::serialize(void* ptr) {
+uintptr_t	Serializer::serialize(Data* ptr) {
 	return (reinterpret_cast<uintptr_t>(ptr));
 }
 

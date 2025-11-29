@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/22 21:52:36 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/11/30 00:16:53 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 # include <iostream>
 # include <string>
 
-typedef struct s_Data {
-	std::string string;
-	int			number;
-	float		float_num;
-	double		double_num;
-}	Data;
+typedef struct Data {
+	std::string		firstname;
+	std::string		lastname;
+	unsigned int	age;
+} Data;
 
 class Serializer {
 	private:
@@ -31,6 +30,6 @@ class Serializer {
 		Serializer& operator=(const Serializer& other);
 
 	public:
-		static uintptr_t	serialize(void* ptr);
+		static uintptr_t	serialize(Data* ptr);
 		static Data* 		deserialize(uintptr_t raw);
 };
