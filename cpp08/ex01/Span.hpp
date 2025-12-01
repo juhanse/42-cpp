@@ -6,13 +6,15 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 18:12:26 by juhanse           #+#    #+#             */
-/*   Updated: 2025/12/01 16:44:03 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/01 16:49:36 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 class Span {
 	private:
