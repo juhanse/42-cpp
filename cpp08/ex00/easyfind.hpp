@@ -12,17 +12,27 @@
 
 #pragma once
 
-#include <vector>
 #include <iostream>
+#include <exception>
 #include <algorithm>
+#include <vector>
+#include <list>
+#include <deque>
+
+class NotFoundException : public std::exception {
+	public:
+		virtual const char* what() const throw() {
+			return ("Number not found");
+		}
+};
 
 template <typename T>
-int	easyfind(T c, int n) {
-	typename T::iterator it = std::find(c.begin(), c.end(), n);
+int	easyfind(T &container, int n) {
+	typename T::iterator it = std::find(container.begin(), container.end(), n);
 
-	if (it != c.end()) {
-		return (*it);
-	} else {
-		throw std::runtime_error("Value not found in container");
+	if (it == container.end()) {
+		throw NotFoundException();
 	}
+
+	return (it);
 }
