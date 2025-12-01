@@ -15,10 +15,12 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <exception>
 
 class Span {
 	private:
-		unsigned int	_N;
+		std::vector<int>	_data;
+		unsigned int		_N;
 
 	public:
 		Span();
@@ -31,4 +33,14 @@ class Span {
 		void addNumber(int number);
 		int shortestSpan();
 		int longestSpan();
+
+		class FullContainerException : public std::exception {
+			public:
+				virtual const char *what() const throw();
+		};
+
+		class NotEnoughNumbersException : public std::exception {
+			public:
+				virtual const char *what() const throw();
+		};
 };
