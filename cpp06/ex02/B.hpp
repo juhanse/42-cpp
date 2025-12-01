@@ -6,17 +6,13 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 09:57:58 by juhanse           #+#    #+#             */
-/*   Updated: 2025/11/30 09:58:28 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/01 12:22:16 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 
-#ifndef B_HPP
-# define B_HPP
-
-# include "Base.hpp"
+#include "Base.hpp"
 
 class B : public Base {
 };
-
-#endif
