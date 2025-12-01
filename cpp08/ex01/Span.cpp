@@ -41,3 +41,11 @@ int Span::shortestSpan() {
 int Span::longestSpan() {
 	return (0);
 }
+
+const char *Span::FullContainerException::what() const throw() {
+	return ("The data container is full");
+}
+
+const char *Span::NotEnoughNumbersException::what() const throw() {
+	return ("Not enough numbers in the data container");
+}
