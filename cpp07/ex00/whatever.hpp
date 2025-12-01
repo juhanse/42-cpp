@@ -6,12 +6,11 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:08:12 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/21 00:10:44 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/01 15:37:36 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#pragma once
 
 #include <iostream>
 
@@ -37,5 +36,3 @@ const T& max(const T &a, const T &b) {
 	}
 	return b;
 }
-
-#endif

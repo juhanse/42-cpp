@@ -6,11 +6,11 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:07:54 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/21 00:19:41 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/01 15:38:00 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Whatever.hpp"
+#include "whatever.hpp"
 
 int main(void) {
 	int a = 2;
