@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:07:54 by juhanse           #+#    #+#             */
-/*   Updated: 2025/10/24 11:49:45 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/01 15:40:43 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlen(char *s) {
 }
 
 void	ft_print_len(char *&str) {
-	std::cout << "Longueur de \"" << str << "\" = " << ft_strlen(str) << std::endl;
+	std::cout << "Length of " << str << " = " << ft_strlen(str) << std::endl;
 }
 
 int main(int ac, char **av) {
