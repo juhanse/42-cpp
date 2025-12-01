@@ -6,23 +6,24 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:08:12 by juhanse           #+#    #+#             */
-/*   Updated: 2025/12/01 16:09:25 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/01 16:20:29 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include <exception>
 
 template <typename T>
 class Array {
 	private:
-		T*				_array;
-		unsigned int	_size;
+		T*		_array;
+		size_t	_size;
 
 	public:
 		Array();
-		Array(unsigned int n);
+		Array(size_t n);
 		Array(const Array& copy);
 		~Array();
 
@@ -30,7 +31,7 @@ class Array {
 		T& operator[](size_t index);
 		const T& operator[](size_t index) const;
 
-		unsigned int size(void) const;
+		size_t size(void) const;
 
 		class IndexOutOfBoundsException : public std::exception {
 			public:
