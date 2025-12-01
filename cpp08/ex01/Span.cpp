@@ -12,13 +12,23 @@
 
 #include "Span.hpp"
 
-Span::Span() : _N(1) {};
+Span::Span() : _N(0) {};
 
-Span::Span(unsigned int N) : _N(N) {
+Span::Span(unsigned int N) : _N(N) {}
+
+Span::Span(const Span& copy) {
+	*this = copy;
 }
 
-Span::~Span() {
+Span& Span::operator=(const Span& other) {
+	if (this != &other) {
+		this->_data = other._data;
+		this->_N = other._N;
+	}
+	return (*this);
 }
+
+Span::~Span() {}
 
 void Span::addNumber(int number) {
 	(void)number;
