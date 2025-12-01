@@ -6,14 +6,15 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/11/30 00:16:53 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/01 12:21:36 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-# include <iostream>
-# include <string>
+#include <iostream>
+#include <string>
+#include <stdint.h>
 
 typedef struct Data {
 	std::string		firstname;
