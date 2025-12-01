@@ -6,16 +6,19 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 11:28:35 by juhanse           #+#    #+#             */
-/*   Updated: 2025/11/04 13:55:05 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/01 12:21:23 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-# include <iostream>
-# include <string>
-# include <cstdint>
-# include <cstdlib>
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <cmath>
+#include <iomanip>
+#include <stdlib.h>
+#include <stdint.h>
 
 class ScalarConverter {
 	public:
