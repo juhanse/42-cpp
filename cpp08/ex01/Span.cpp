@@ -31,15 +31,37 @@ Span& Span::operator=(const Span& other) {
 Span::~Span() {}
 
 void Span::addNumber(int number) {
-	(void)number;
+	if (this->_data.size() >= this->_N) {
+		throw FullContainerException();
+	}
+
+	this->_data.push_back(number);
 }
 
 int Span::shortestSpan() {
-	return (0);
+	if (this->_data.size() < 2) {
+		throw NotEnoughNumbersException();
+	}
+
+	std::vector<int> map = this->_data;
+	std::sort(map.begin(), map.end());
+	int min = map[1] - map[0];
+	for (size_t i = 1; i < map.size(); i++) {
+		if (map[i] - map[i - 1] < min) {
+			min = map[i] - map[i - 1];
+		}
+	}
+	return (min);
 }
 
 int Span::longestSpan() {
-	return (0);
+	if (this->_data.size() < 2) {
+		throw NotEnoughNumbersException();
+	}
+
+	std::vector<int> map = this->_data;
+	std::sort(map.begin(), map.end());
+	return (map.back() - map.front());
 }
 
 const char *Span::FullContainerException::what() const throw() {
