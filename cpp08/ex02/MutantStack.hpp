@@ -6,15 +6,15 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 18:12:26 by juhanse           #+#    #+#             */
-/*   Updated: 2025/12/02 13:07:03 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/02 14:53:37 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <stack>
 #include <algorithm>
+#include <stack>
 
 template <typename T>
 class MutantStack : public std::stack<T> {
