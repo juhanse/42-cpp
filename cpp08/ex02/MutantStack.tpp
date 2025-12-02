@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 12:54:22 by juhanse           #+#    #+#             */
-/*   Updated: 2025/12/02 12:59:19 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/02 13:06:55 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ MutantStack<T>::MutantStack(const MutantStack<T>& copy) {
 }
 
 template<typename T>
-MutantStack<T>& MutantStack<T>::operator=(const MutantStack& other) {
+MutantStack<T>& MutantStack<T>::operator=(const MutantStack<T>& other) {
 	if (this != &other) {
 		std::stack<T>::operator=(other);
 	}
