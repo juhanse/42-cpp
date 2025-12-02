@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:07:54 by juhanse           #+#    #+#             */
-/*   Updated: 2025/11/28 18:09:20 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/02 14:59:23 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 int main(void) {
 	std::vector<int> vec;
 
-	vec.push_back(10);
-	vec.push_back(20);
-	vec.push_back(30);
-	vec.push_back(40);
+	vec.push_back(2);
+	vec.push_back(4);
+	vec.push_back(6);
+	vec.push_back(8);
 
 	try {
-		std::cout << "Found: " << easyfind(vec, 30) << std::endl;
-		std::cout << "Found: " << easyfind(vec, 50) << std::endl;
+		std::cout << "Found: " << easyfind(vec, 6) << std::endl;
+		std::cout << "Found: " << easyfind(vec, 10) << std::endl;
 	} catch (const std::exception &e) {
 		std::cerr << e.what() << std::endl;
 	}
