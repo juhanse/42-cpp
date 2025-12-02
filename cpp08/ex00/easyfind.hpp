@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:08:12 by juhanse           #+#    #+#             */
-/*   Updated: 2025/12/01 16:40:42 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/02 14:34:05 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 #include <exception>
 #include <algorithm>
 #include <vector>
-#include <list>
-#include <deque>
 
 class NotFoundException : public std::exception {
 	public:
@@ -34,5 +32,5 @@ int	easyfind(T &container, int n) {
 		throw NotFoundException();
 	}
 
-	return (it);
+	return (*it);
 }
