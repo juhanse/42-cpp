@@ -6,11 +6,11 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 11:26:44 by juhanse           #+#    #+#              #
-#    Updated: 2025/12/02 16:12:51 by juhanse          ###   ########.fr        #
+#    Updated: 2025/12/05 12:25:26 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = bitcoin
+NAME = btc
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
