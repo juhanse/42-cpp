@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:08:12 by juhanse           #+#    #+#             */
-/*   Updated: 2025/12/02 16:14:33 by juhanse          ###   ########.fr       */
+/*   Updated: 2025/12/05 12:27:38 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 #include <iostream>
 #include <exception>
+#include <map>
 
 class BitcoinExchange {
+	private:
+		std::map<std::string, float> dataMap;
+
 	public:
 		BitcoinExchange();
 		BitcoinExchange(const BitcoinExchange& copy);
 		~BitcoinExchange();
 
 		BitcoinExchange& operator=(const BitcoinExchange& other);
-}
+};
