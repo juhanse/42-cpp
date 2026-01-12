@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:08:12 by juhanse           #+#    #+#             */
-/*   Updated: 2025/12/06 15:40:20 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/12 19:48:28 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,6 @@ class RPN {
 		~RPN();
 
 		RPN& operator=(const RPN& other);
+
+		void RPN::calculate(const std::string& filename)
 };
