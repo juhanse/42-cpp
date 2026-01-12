@@ -6,13 +6,18 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:08:12 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/12 19:48:28 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/12 19:56:12 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include <algorithm>
+#include <stack>
+#include <sstream>
+#include <stdexcept>
+#include <cstdlib>
 
 class RPN {
 	public:
@@ -22,5 +27,5 @@ class RPN {
 
 		RPN& operator=(const RPN& other);
 
-		void RPN::calculate(const std::string& filename)
+		int calculate(const std::string& expression);
 };
