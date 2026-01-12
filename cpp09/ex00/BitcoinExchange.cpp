@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 16:12:59 by juhanse           #+#    #+#             */
-/*   Updated: 2025/12/06 15:28:38 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/12 19:18:02 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,14 @@ BitcoinExchange::BitcoinExchange(const BitcoinExchange& other) {
 
 BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& other) {
 	if (this != &other) {
-		this->dataMap = other.dataMap;
+		this->database = other.database;
 	}
 	return *this;
 }
 
 void BitcoinExchange::loadData(const std::string& filename) {
-	std::ifstream file(filename);
+	std::ifstream file;
+	file.open(filename.c_str());
 	if (!file.is_open()) {
 		throw std::runtime_error("Could not open data file.");
 	}
@@ -40,16 +41,17 @@ void BitcoinExchange::loadData(const std::string& filename) {
 		float value;
 
 		if (std::getline(ss, date, ',') && ss >> value) {
-			dataMap[date] = value;
+			database[date] = value;
 		}
 	}
 	file.close();
 }
 
 void BitcoinExchange::processFile(const std::string& filename) {
-	std::ifstream file(filename);
+	std::ifstream file;
+	file.open(filename.c_str());
 	if (!file.is_open()) {
-		throw std::runtime_error("Could not open input file.");
+		throw std::runtime_error("Could not open data file.");
 	}
 
 	std::string line;
@@ -59,10 +61,10 @@ void BitcoinExchange::processFile(const std::string& filename) {
 		float amount;
 
 		if (std::getline(ss, date, '|') && ss >> amount) {
-			std::map<std::string, float>::iterator it = dataMap.lower_bound(date);
-			if (it != dataMap.end() && it->first == date) {
+			std::map<std::string, float>::iterator it = database.lower_bound(date);
+			if (it != database.end() && it->first == date) {
 				std::cout << date << " => " << amount << " = " << amount * it->second << std::endl;
-			} else if (it != dataMap.begin()) {
+			} else if (it != database.begin()) {
 				--it;
 				std::cout << date << " => " << amount << " = " << amount * it->second << std::endl;
 			} else {
