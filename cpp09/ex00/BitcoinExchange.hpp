@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:08:12 by juhanse           #+#    #+#             */
-/*   Updated: 2025/12/06 15:27:56 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/12 19:09:35 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 class BitcoinExchange {
 	private:
-		std::map<std::string, float> dataMap;
+		std::map<std::string, float> database;
 
 	public:
 		BitcoinExchange();
