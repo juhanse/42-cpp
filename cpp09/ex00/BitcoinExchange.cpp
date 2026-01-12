@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 16:12:59 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/12 19:18:02 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/12 19:42:45 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,18 @@ void BitcoinExchange::loadData(const std::string& filename) {
 	file.close();
 }
 
+int	BitcoinExchange::checkError(float amount) {
+	if (amount < 0) {
+		std::cerr << "Error: not a positive number." << std::endl;
+		return (0);
+	}
+	if (amount > 1000) {
+		std::cerr << "Error: too large a number." << std::endl;
+		return (0);
+	}
+	return (1);
+}
+
 void BitcoinExchange::processFile(const std::string& filename) {
 	std::ifstream file;
 	file.open(filename.c_str());
@@ -63,12 +75,16 @@ void BitcoinExchange::processFile(const std::string& filename) {
 		if (std::getline(ss, date, '|') && ss >> amount) {
 			std::map<std::string, float>::iterator it = database.lower_bound(date);
 			if (it != database.end() && it->first == date) {
-				std::cout << date << " => " << amount << " = " << amount * it->second << std::endl;
+				if (checkError(amount)) {
+					std::cout << date << " => " << amount << " = " << amount * it->second << std::endl;
+				}
 			} else if (it != database.begin()) {
-				--it;
-				std::cout << date << " => " << amount << " = " << amount * it->second << std::endl;
+				if (checkError(amount)) {
+					--it;
+					std::cout << date << " => " << amount << " = " << amount * it->second << std::endl;
+				}
 			} else {
-				std::cerr << "No data available for date: " << date << std::endl;
+				std::cerr << "Error: bad input => " << date << std::endl;
 			}
 		}
 	}
