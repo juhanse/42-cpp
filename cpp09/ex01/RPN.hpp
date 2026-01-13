@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:08:12 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/12 19:56:12 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/13 15:05:19 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ class RPN {
 
 		RPN& operator=(const RPN& other);
 
+		int operation(const std::string& operator);
 		int calculate(const std::string& expression);
 };
