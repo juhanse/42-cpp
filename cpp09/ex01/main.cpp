@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:07:54 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/12 19:57:16 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/17 01:27:47 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,13 @@ int main(int ac, char **av) {
 	}
 
 	RPN rpn;
-	std::cout << rpn.calculate(av[1]) << std::endl;
+	try {
+		rpn.calculate(av[1]);
+	} catch(const std::exception& e) {
+		std::cerr << e.what() << '\n';
+		return (1);
+	}
 
+	std::cout << rpn.result() << std::endl;
 	return (0);
 }
