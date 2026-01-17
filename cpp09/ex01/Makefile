@@ -6,11 +6,11 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 11:26:44 by juhanse           #+#    #+#              #
-#    Updated: 2025/12/06 15:37:25 by juhanse          ###   ########.fr        #
+#    Updated: 2026/01/17 01:34:07 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = rpn
+NAME = RPN
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
