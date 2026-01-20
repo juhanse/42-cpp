@@ -34,6 +34,10 @@ int RPN::result() const {
 }
 
 void RPN::operation(const std::string& token) {
+	if (_stack.size() < 2) {
+		throw std::runtime_error("Error: Not enough operands");
+	}
+
 	int y = _stack.top();
 	_stack.pop();
 	
