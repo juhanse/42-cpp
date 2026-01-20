@@ -34,24 +34,24 @@ int RPN::result() const {
 }
 
 void RPN::operation(const std::string& token) {
+	int y = _stack.top();
+	_stack.pop();
+	
+	int x = _stack.top();
+	_stack.pop();
+
 	int result;
-
-	_b = _stack.top();
-	_stack.pop();
-	_a = _stack.top();
-	_stack.pop();
-
 	if (token == "+") {
-		result = _a + _b;
+		result = x + y;
 	} else if (token == "-") {
-		result = _a - _b;
+		result = x - y;
 	} else if (token == "*") {
-		result = _a * _b;
+		result = x * y;
 	} else if (token == "/") {
-		if (_b == 0) {
+		if (y == 0) {
 			throw std::runtime_error("Error: Division by zero");
 		}
-		result = _a / _b;
+		result = x / y;
 	} else {
 		throw std::runtime_error("Error: Unknown operator");
 	}
