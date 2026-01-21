@@ -6,16 +6,18 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:36:10 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 20:06:55 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/21 22:31:31 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
+#include <iomanip>
 #include <iostream>
 #include <climits>
 #include <cstdlib>
 #include <string>
+#include <algorithm>
 #include <vector>
 #include <deque>
 #include <iterator>
@@ -42,6 +44,9 @@ class PmergeMe {
 
 		const std::vector<int>& getVector() const { return _vector; }
 		const std::deque<int>& getDeque()  const { return _deque; }
+
+		template <typename T>
+		void fordJohnson(T& container);
 };
 
 #include "PmergeMe.tpp"
