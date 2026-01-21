@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:36:10 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 14:25:07 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/21 20:06:55 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 
 class PmergeMe {
 	private:
-		int _size;
 		std::vector<int> _initial;
 		std::vector<int> _vector;
 		std::deque<int> _deque;

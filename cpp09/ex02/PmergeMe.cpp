@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:37:45 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 14:32:47 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/21 20:07:23 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 PmergeMe::PmergeMe() {}
 
-PmergeMe::PmergeMe(const PmergeMe& copy) : _size(copy._size), _initial(copy._initial), _vector(copy._vector), _deque(copy._deque), _vTime(copy._vTime), _dTime(copy._dTime) {}
+PmergeMe::PmergeMe(const PmergeMe& copy) : _initial(copy._initial), _vector(copy._vector), _deque(copy._deque), _vTime(copy._vTime), _dTime(copy._dTime) {}
 
 PmergeMe::~PmergeMe() {}
 
@@ -51,8 +51,6 @@ void PmergeMe::initialize(int ac, char **av) {
 		_vector.push_back(num);
 		_deque.push_back(num);
 	}
-
-	_size = _vector.size();
 }
 
 void PmergeMe::sort() {
@@ -75,7 +73,7 @@ void PmergeMe::display() const {
 	std::cout << std::endl;
 
 	std::cout << std::endl;
-	std::cout << "Time to process a range of " << _size << " elements with std::vector : " << _vTime << " us";
+	std::cout << "Time to process a range of " << _vector.size() << " elements with std::vector : " << _vTime << " us";
 	std::cout << std::endl;
-	std::cout << "Time to process a range of " << _size << " elements with std::deque : " << _dTime << " us";
+	std::cout << "Time to process a range of " << _deque.size() << " elements with std::deque : " << _dTime << " us";
 }
