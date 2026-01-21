@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:36:10 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 11:39:11 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/21 11:43:03 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ class PmergeMe {
 
 		PmergeMe& operator=(const PmergeMe& other);
 
+		std::vector<int> getVector() const { return _vector; }
+		std::deque<int> getDeque() const { return _deque; }
 		void merge_insert(int ac, char **av);
 };
