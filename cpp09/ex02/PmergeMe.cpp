@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:37:45 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 11:39:32 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/21 11:42:43 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 PmergeMe::PmergeMe() {}
 
-PmergeMe::PmergeMe(const PmergeMe& copy) {
-	*this = copy;
-}
+PmergeMe::PmergeMe(const PmergeMe& copy) : _vector(copy._vector), _deque(copy._deque), _vectorTime(copy._vectorTime), _dequeTime(copy._dequeTime) {}
 
 PmergeMe::~PmergeMe() {}
 
 PmergeMe& PmergeMe::operator=(const PmergeMe& other) {
-	(void)other;
+	this->_vector = other._vector;
+	this->_deque = other._deque;
+	this->_vectorTime = other._vectorTime;
+	this->_dequeTime = other._dequeTime;
 	return (*this);
 }
 
