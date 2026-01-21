@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:37:45 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 14:31:29 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/21 14:32:47 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ void PmergeMe::initialize(int ac, char **av) {
 			throw std::out_of_range("Error: Number exceeds INT_MAX.");
 		}
 
-		int finalNum = static_cast<int>(val);
-		_initial.push_back(finalNum);
-		_vector.push_back(finalNum);
-		_deque.push_back(finalNum);
+		int num = static_cast<int>(val);
+		_initial.push_back(num);
+		_vector.push_back(num);
+		_deque.push_back(num);
 	}
 
 	_size = _vector.size();
