@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:37:45 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 22:33:23 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/21 23:01:00 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ void PmergeMe::sort() {
 	start = clock();
 	fordJohnson(_vector);
 	end = clock();
-	_vTime = static_cast<double>(end - start) * 1000000.0 / CLOCKS_PER_SEC;
+	_vTime = static_cast<double>(end - start) * 1000 / CLOCKS_PER_SEC;
 
 	start = clock();
 	fordJohnson(_deque);
 	end = clock();
-	_dTime = static_cast<double>(end - start) * 1000000.0 / CLOCKS_PER_SEC;
+	_dTime = static_cast<double>(end - start) * 1000 / CLOCKS_PER_SEC;
 }
 
 void PmergeMe::display() const {
