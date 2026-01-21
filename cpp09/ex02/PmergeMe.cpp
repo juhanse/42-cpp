@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:37:45 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 14:25:41 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/21 14:29:53 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,10 @@ void PmergeMe::display() const {
 	printContainer(_initial);
 	std::cout << std::endl;
 
-	std::cout << "After: " << std::endl;
+	std::cout << "After: ";
+	printContainer(_vector);
+	std::cout << std::endl;
+
 	std::cout << std::endl;
 	std::cout << "Time to process a range of " << _size << " elements with std::vector : " << _vTime << " us" << std::endl;
 	std::cout << "Time to process a range of " << _size << " elements with std::deque : " << _dTime << " us";
