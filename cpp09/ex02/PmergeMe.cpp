@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PmergeMe.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 00:07:54 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 11:36:05 by juhanse          ###   ########.fr       */
+/*   Created: 2026/01/21 11:37:45 by juhanse           #+#    #+#             */
+/*   Updated: 2026/01/21 11:39:32 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PmergeMe.hpp"
 
-int main(int ac, char **av) {
-	PmergeMe pm;
+PmergeMe::PmergeMe() {}
 
-	try {
-		pm.merge_insert(ac, av);
-	} catch (std::exception &e) {
-		std::cerr << e.what() << std::endl;
-		return (1);
-	}
+PmergeMe::PmergeMe(const PmergeMe& copy) {
+	*this = copy;
+}
 
-	return (0);
+PmergeMe::~PmergeMe() {}
+
+PmergeMe& PmergeMe::operator=(const PmergeMe& other) {
+	(void)other;
+	return (*this);
+}
+
+void PmergeMe::merge_insert(int ac, char **av) {
+	// Implementation of merge-insert sort algorithm
 }

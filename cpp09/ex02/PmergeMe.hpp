@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PmergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 00:07:54 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 11:36:05 by juhanse          ###   ########.fr       */
+/*   Created: 2026/01/21 11:36:10 by juhanse           #+#    #+#             */
+/*   Updated: 2026/01/21 11:39:11 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PmergeMe.hpp"
+#pragma once
 
-int main(int ac, char **av) {
-	PmergeMe pm;
+#include <iostream>
+#include <vector>
+#include <deque>
+#include <iterator>
+#include <time.h>
 
-	try {
-		pm.merge_insert(ac, av);
-	} catch (std::exception &e) {
-		std::cerr << e.what() << std::endl;
-		return (1);
-	}
+class PmergeMe {
+	private:
+		std::vector<int> _vector;
+		std::deque<int> _deque;
+		double _vectorTime;
+		double _dequeTime;
 
-	return (0);
-}
+	public:
+		PmergeMe();
+		PmergeMe(const PmergeMe& copy);
+		~PmergeMe();
+
+		PmergeMe& operator=(const PmergeMe& other);
+
+		void merge_insert(int ac, char **av);
+};
