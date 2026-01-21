@@ -6,13 +6,16 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:36:10 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 11:43:03 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/21 14:25:07 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include <climits>
+#include <cstdlib>
+#include <string>
 #include <vector>
 #include <deque>
 #include <iterator>
@@ -20,10 +23,12 @@
 
 class PmergeMe {
 	private:
+		int _size;
+		std::vector<int> _initial;
 		std::vector<int> _vector;
 		std::deque<int> _deque;
-		double _vectorTime;
-		double _dequeTime;
+		double _vTime;
+		double _dTime;
 
 	public:
 		PmergeMe();
@@ -32,7 +37,12 @@ class PmergeMe {
 
 		PmergeMe& operator=(const PmergeMe& other);
 
-		std::vector<int> getVector() const { return _vector; }
-		std::deque<int> getDeque() const { return _deque; }
-		void merge_insert(int ac, char **av);
+		void initialize(int ac, char **av);
+		void sort();
+		void display() const;
+
+		const std::vector<int>& getVector() const { return _vector; }
+		const std::deque<int>& getDeque()  const { return _deque; }
 };
+
+#include "PmergeMe.tpp"
