@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:37:45 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 20:07:23 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/21 22:33:23 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,17 @@ void PmergeMe::initialize(int ac, char **av) {
 }
 
 void PmergeMe::sort() {
-	clock_t start = clock();
-	//fordJohnson(_vector);
-	_vTime = static_cast<double>(clock() - start) / CLOCKS_PER_SEC * 1000000;
+	clock_t start, end;
 
 	start = clock();
-	//fordJohnson(_deque);
-	_dTime = static_cast<double>(clock() - start) / CLOCKS_PER_SEC * 1000000;
+	fordJohnson(_vector);
+	end = clock();
+	_vTime = static_cast<double>(end - start) * 1000000.0 / CLOCKS_PER_SEC;
+
+	start = clock();
+	fordJohnson(_deque);
+	end = clock();
+	_dTime = static_cast<double>(end - start) * 1000000.0 / CLOCKS_PER_SEC;
 }
 
 void PmergeMe::display() const {
@@ -72,8 +76,11 @@ void PmergeMe::display() const {
 	printContainer(_vector);
 	std::cout << std::endl;
 
+	std::cout << std::fixed << std::setprecision(5);
+
 	std::cout << std::endl;
 	std::cout << "Time to process a range of " << _vector.size() << " elements with std::vector : " << _vTime << " us";
 	std::cout << std::endl;
 	std::cout << "Time to process a range of " << _deque.size() << " elements with std::deque : " << _dTime << " us";
+	std::cout << std::endl;
 }
