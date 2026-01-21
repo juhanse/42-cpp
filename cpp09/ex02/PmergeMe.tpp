@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 14:24:31 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/21 22:37:51 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/21 22:42:37 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void PmergeMe::fordJohnson(T& container) {
 
     // 2. CRÉATION DES PAIRES ET TRI INDIVIDUEL
     // On crée une liste de paires où .first est toujours le plus grand
-    std::vector<std::pair<int, int>> pairs;
+    std::vector<std::pair<int, int> > pairs;
     for (size_t i = 0; i < container.size(); i += 2) {
         int a = container[i];
         int b = container[i + 1];
