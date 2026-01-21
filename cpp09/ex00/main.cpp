@@ -19,7 +19,14 @@ int main(int ac, char **av) {
 	}
 
 	BitcoinExchange btc;
-	btc.loadData("data.csv");
-	btc.processFile(av[1]);
+
+	try {
+		btc.loadData("data.csv");
+		btc.processFile(av[1]);
+	} catch(const std::exception& e) {
+		std::cerr << e.what() << '\n';
+		return (1);
+	}
+
 	return (0);
 }

@@ -75,11 +75,19 @@ void BitcoinExchange::processFile(const std::string& filename) {
 		if (std::getline(ss, date, '|') && ss >> amount) {
 			std::map<std::string, float>::iterator it = database.lower_bound(date);
 			if (it != database.end() && it->first == date) {
-				if (checkError(amount)) {
+				if (amount < 0) {
+					std::cerr << "Error: not a positive number." << std::endl;
+				} else if (amount > 1000) {
+					std::cerr << "Error: too large a number." << std::endl;
+				} else {
 					std::cout << date << " => " << amount << " = " << amount * it->second << std::endl;
 				}
 			} else if (it != database.begin()) {
-				if (checkError(amount)) {
+				if (amount < 0) {
+					std::cerr << "Error: not a positive number." << std::endl;
+				} else if (amount > 1000) {
+					std::cerr << "Error: too large a number." << std::endl;
+				} else {
 					--it;
 					std::cout << date << " => " << amount << " = " << amount * it->second << std::endl;
 				}
