@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:08:12 by juhanse           #+#    #+#             */
-/*   Updated: 2026/01/12 19:42:36 by juhanse          ###   ########.fr       */
+/*   Updated: 2026/01/22 00:50:01 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ class BitcoinExchange {
 
 		BitcoinExchange& operator=(const BitcoinExchange& other);
 
-		int	checkError(float amount);
 		void loadData(const std::string& filename);
 		void processFile(const std::string& filename);
 };
